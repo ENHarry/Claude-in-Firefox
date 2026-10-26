@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Claude Browser Connector (Community)",
+  "version": "0.1.1",
+  "description": "Unofficial connector that lets Claude Code / Claude Desktop automate this Firefox browser via a local MCP server. You control what it can do.",
+  "permissions": [
+    "nativeMessaging",
+    "tabs",
+    "webNavigation",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "browser_action": {
+    "default_title": "Claude in Firefox connector"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "claude-in-firefox@local.connector",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}

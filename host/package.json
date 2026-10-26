@@ -1,0 +1,12 @@
+{
+  "name": "claude-in-firefox-host",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Native messaging host + MCP server for the Claude in Firefox community connector.",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "zod": "^3.23.8"
+  }
+}

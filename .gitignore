@@ -1,0 +1,15 @@
+# AMO API credentials -- never commit these
+amo-credentials.json
+
+# Signed build output
+dist/
+
+node_modules/
+
+# AMO upload state
+extension/.amo-upload-uuid
+
+# Generated per machine by install.ps1 / install.sh (contain local paths)
+host/host-wrapper.cmd
+host/host-wrapper.sh
+host/com.anthropic.claude_in_firefox.json

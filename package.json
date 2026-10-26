@@ -1,0 +1,15 @@
+{
+  "name": "claude-in-firefox",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Community connector that lets Claude drive Firefox. Root package holds the web-ext tooling used to lint and self-sign the extension.",
+  "scripts": {
+    "lint": "web-ext lint --source-dir=extension",
+    "sign": "powershell -ExecutionPolicy Bypass -File ./sign.ps1",
+    "check-signing": "node check-signing.mjs",
+    "wait-for-signing": "node check-signing.mjs --watch"
+  },
+  "devDependencies": {
+    "web-ext": "^8.9.0"
+  }
+}
